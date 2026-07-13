@@ -129,41 +129,36 @@ body{
 
 }
     /* ================= RUNNING TEXT ================= */
-
 .running-text{
-    width:80%;
+    width:100%;
     overflow:hidden;
     background:#0d6efd;
     color:#fff;
-    border-radius:8px;
-    margin:20px 0;
     padding:12px 0;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    border-radius:8px;
+    position:relative;
 }
 
-.running-content{
-    display:flex;
-    width:max-content;
-    animation:running 18s linear infinite;
-}
-
-.running-content span{
+.running-track{
+    display:inline-flex;
     white-space:nowrap;
+    animation:marquee 20s linear infinite;
+}
+
+.running-track span{
     font-size:20px;
     font-weight:bold;
-    padding-right:40px;
+    padding-right:60px;
 }
 
-@keyframes running{
-
-    from{
+@keyframes marquee{
+    0%{
         transform:translateX(0);
     }
 
-    to{
-        transform:translateX(-50%);
+    100%{
+        transform:translateX(-33.33%);
     }
-
 }
 
 </style>
