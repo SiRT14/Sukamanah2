@@ -251,104 +251,52 @@ Administrator
 
 <ul>
 
-<li><i class="bi bi-speedometer2"></i> Dashboard</li>
+<li onclick="showPage('dashboard')"><i class="bi bi-speedometer2"></i> Dashboard</li>
 
-<li><i class="bi bi-people-fill"></i> Data Warga</li>
+<li onclick="showPage('warga')"><i class="bi bi-people-fill"></i> Data Warga</li>
 
-<li><i class="bi bi-calendar-event-fill"></i> Jadwal Pengajian</li>
+<li onclick="showPage('pengajian')"><i class="bi bi-calendar-event-fill"></i> Jadwal Pengajian</li>
 
-<li><i class="bi bi-book-half"></i> Data Kifayah</li>
+<li onclick="showPage('kifayah')"><i class="bi bi-book-half"></i> Data Kifayah</li>
 
-<li><i class="bi bi-diagram-3-fill"></i> Struktur Organisasi</li>
+<li onclick="showPage('organisasi')"><i class="bi bi-diagram-3-fill"></i> Struktur Organisasi</li>
 
-<li><i class="bi bi-calendar-check-fill"></i> Kegiatan Warga</li>
+<li onclick="showPage('kegiatan')"><i class="bi bi-calendar-check-fill"></i> Kegiatan Warga</li>
 
-<li><i class="bi bi-cash-stack"></i> Laporan Keuangan RT14</li>
+<li onclick="showPage('keuangan')"><i class="bi bi-cash-stack"></i> Laporan Keuangan RT14</li>
 
-<li><i class="bi bi-megaphone-fill"></i> Pengumuman</li>
+<li onclick="showPage('pengumuman')"><i class="bi bi-megaphone-fill"></i> Pengumuman</li>
 
 </ul>
 
 </div>
 
 <!-- CONTENT -->
-
 <div class="content">
-
-<h1>Dashboard</h1>
-
-<hr>
-    
+<div id="dashboard" class="page">
+<h1>Dashboard</h1><hr><br>
+<h3>Selamat Datang di Website RT014/RW012</h3>
+<p>Pilih menu di sebelah kiri untuk membuka halaman.</p>
 </div>
-    
-<br>
 
-<h2 class="judul">Data Warga</h2>
-
+<div id="warga" class="page" style="display:none;">
+<h1>Data Warga</h1><hr><br>
 <div class="cards">
-
-    <div class="card">
-        <h3>Total Warga</h3>
-        <h1>234</h1>
-    </div>
-
-    <div class="card">
-        <h3>Total KK</h3>
-        <h1>64</h1>
-    </div>
-
-    <div class="card">
-        <h3>Warga Tetap</h3>
-        <h1>50</h1>
-    </div>
-
-    <div class="card">
-        <h3>Total Sewa</h3>
-        <h1>14</h1>
-    </div>
-
-    <div class="card">
-        <h3>Total Rumah</h3>
-        <h1>76</h1>
-    </div>
-
-    <div class="card">
-        <h3>Rumah Kosong</h3>
-        <h1>12</h1>
-    </div>
-
-    <div class="card">
-        <h3>Laki-laki</h3>
-        <h1>119</h1>
-    </div>
-
-    <div class="card">
-        <h3>Perempuan</h3>
-        <h1>115</h1>
-    </div>
-
-    <div class="card">
-        <h3>MUSLIM</h3>
-        <h1>59</h1>
-    </div>
-
-    <div class="card">
-        <h3>NON MUSLIM</h3>
-        <h1>5</h1>
-    </div>
-
-    <div class="card">
-        <h3>RUKEM</h3>
-        <h1>61</h1>
-    </div>
-
-    <div class="card">
-        <h3>NON RUKEM</h3>
-        <h1>1</h1>
-    </div>
+<div class="card"><h3>Total Warga</h3><h1>234</h1></div>
+<div class="card"><h3>Total KK</h3><h1>64</h1></div>
+<div class="card"><h3>Warga Tetap</h3><h1>50</h1></div>
+<div class="card"><h3>Total Sewa</h3><h1>14</h1></div>
 </div>
 </div>
-    <div class="running">
+
+<div id="pengajian" class="page" style="display:none;"><h1>Jadwal Pengajian</h1><hr><p>Data akan diisi dari PDF.</p></div>
+<div id="kifayah" class="page" style="display:none;"><h1>Data Kifayah</h1><hr><p>Data akan diisi dari PDF.</p></div>
+<div id="organisasi" class="page" style="display:none;"><h1>Struktur Organisasi</h1><hr></div>
+<div id="kegiatan" class="page" style="display:none;"><h1>Kegiatan Warga</h1><hr></div>
+<div id="keuangan" class="page" style="display:none;"><h1>Laporan Keuangan RT14</h1><hr></div>
+<div id="pengumuman" class="page" style="display:none;"><h1>Pengumuman</h1><hr></div>
+</div>
+<div class="running">
 
 <marquee scrollamount="6">
 
@@ -366,5 +314,12 @@ Copyright © 2026 RT014/RW012
 
 </div>
 
+
+<script>
+function showPage(id){
+document.querySelectorAll('.page').forEach(function(p){p.style.display='none';});
+document.getElementById(id).style.display='block';
+}
+</script>
 </body>
 </html>
