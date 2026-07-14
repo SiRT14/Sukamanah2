@@ -31,10 +31,41 @@ body{background:#f4f6f9;display:flex;flex-direction:column;min-height:100vh}
     gap:20px;
     margin-top:25px;
 }
-    .finance-cards{
+   .finance-cards{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
+    margin-bottom:30px;
+}
+    .finance-card{
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.finance-card:hover{
+    transform:translateY(-5px);
+}
+
+.finance-card h3{
+    font-size:18px;
+    color:#666;
+    margin-top:10px;
+}
+
+.finance-card h1{
+    font-size:34px;
+    color:#0d6efd;
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+.finance-card .icon{
+    font-size:42px;
+    color:#0d6efd;
 }
 
 @media(max-width:992px){
@@ -381,8 +412,6 @@ Open PDF
 
     </div>
 
-    </div>
-
 <div id="organisasi" class="page">
 
 <h1>Struktur Organisasi RT014/RW012</h1>
@@ -432,7 +461,7 @@ Open PDF
 
 <br>
 
-<div class="finance-card">
+<div class="card">
 
 <h3>📂 Dokumen Laporan</h3>
 
